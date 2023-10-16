@@ -1,10 +1,23 @@
 import React from 'react'
-
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+import About from './pages/About'
+import Home from './pages/Home'
+import Signin from './pages/Signin'
+import SignUp from './pages/SignUp'
+import Profile from './pages/Profile'
 const App = () => {
-  console.log("Hello")
+  
   return (
     <div>
-      <h3 className='font-extrabold text-[2rem] text-red-800 flex justify-center items-center h-screen'>Hello World !</h3>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/sign-in' element={<Signin/>}/>
+        <Route path='/sign-up' element={<SignUp/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/profile' element={<Profile/>}/>
+      </Routes>
+    </Router>
     </div>
   )
 }
