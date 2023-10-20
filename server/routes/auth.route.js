@@ -5,3 +5,4 @@ const { signup } = require('../controller/auth.control')
  router.route('/signup').post(signup)
 
  module.exports = router;
+   

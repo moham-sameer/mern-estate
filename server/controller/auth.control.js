@@ -1,6 +1,6 @@
 const User = require('../model/user')
 const bcryptjs = require('bcryptjs')
-const signup = async(req,res) => {
+const signup = async(req,res, next) => {
     try {
          const {username, email, password} = req.body;
          const hashedPassword = bcryptjs.hashSync(password,10);
@@ -10,7 +10,8 @@ const signup = async(req,res) => {
           console.log(result)
         
      } catch (error) {
-        res.status(500).json(error.message)
+        next(error);
+        
      }
 }
 
