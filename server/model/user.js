@@ -17,7 +17,7 @@ const productSchema = new mongoose.Schema({
    },
    password: {
      type: String,
-     required: [true, "must provide password"],
+     required: [true, "must provide password"], 
    },
 },{timestamps: true})
 
