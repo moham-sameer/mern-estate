@@ -9,9 +9,7 @@ const Profile = () => {
   const [filePerc,setFilePerc] = useState(0)
   const [fileError,setFileError] = useState(false)
   const [formData,setFormData] = useState({})
-  console.log(filePerc)
-  console.log(file)
-  console.log(formData)
+  
   // firebase storage
       // allow read;
       // allow write: if
