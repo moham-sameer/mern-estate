@@ -9,8 +9,6 @@ const signup = async(req,res, next) => {
          const newUser = new User({username,email,password:hashedPassword});
           const result = await newUser.save();
            res.send(result)
-          console.log(result)
-        
         } catch (error) {
             next(error);
             
